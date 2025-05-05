@@ -117,7 +117,10 @@
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
+    
     .modal-content {
         margin: 20% auto;
     }
 }
+    
+

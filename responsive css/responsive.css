@@ -89,7 +89,100 @@ main {
 .hero button:hover {
     background-color: #d35400;
 }
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduce the minimum size */
+    gap: 15px; /* Adjust spacing between cards */
+}
 
+.meal-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    font-size: 0.9em; /* Reduce font size */
+}
+
+.meal-card:hover {
+    transform: scale(1.05);
+}
+
+.meal-card img {
+    width: 100%;
+    height: 150px; /* Reduce image height */
+    object-fit: cover; /* Ensure the image fits nicely */
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.meal-card:hover img {
+    transform: scale(1.1);
+}
+
+.meal-card h3 {
+    padding: 10px; /* Reduce padding */
+    text-align: center;
+    margin: 0;
+    font-size: 1em; /* Adjust font size */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#recipeTitle {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#recipeInstructions {
+    white-space: pre-line; /* Preserve line breaks */
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #34495e;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    /* width: 100%; */
+}
 .loading-skeleton {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
